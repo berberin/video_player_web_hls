@@ -8,6 +8,12 @@ import 'package:js/js.dart';
 @JS('Hls.isSupported')
 external bool isSupported();
 
+@JS('JSON.stringify')
+external String stringify(Object obj);
+
+@JS('console.log')
+external void consoleLog(Object object);
+
 @JS()
 class Hls {
   external factory Hls(HlsConfig config);
@@ -23,6 +29,21 @@ class Hls {
 
   @JS()
   external void on(String event, Function callback);
+
+  @JS('Hls.levels')
+  external dynamic levels;
+
+  @JS('Hls.currentLevel')
+  external int currentLevel;
+
+  @JS('Hls.autoLevelEnabled')
+  external bool autoLevelEnabled;
+
+  @JS('Hls.autoLevelCapping')
+  external int autoLevelCapping;
+
+  @JS('Hls.loadLevels')
+  external dynamic loadLevels;
 
   external HlsConfig config;
 }

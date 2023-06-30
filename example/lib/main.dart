@@ -17,9 +17,10 @@ class _VideoAppState extends State<VideoApp> {
   void initState() {
     super.initState();
     try {
-      _controller = VideoPlayerController.network(
-          'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8')
+      _controller = VideoPlayerController.network('https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8')
         ..initialize().then((_) {
+          print(_controller.getVideoTracks());
+          _controller.setVideoTracks(0);
           // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
           setState(() {});
         });
@@ -45,9 +46,7 @@ class _VideoAppState extends State<VideoApp> {
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             setState(() {
-              _controller.value.isPlaying
-                  ? _controller.pause()
-                  : _controller.play();
+              _controller.value.isPlaying ? _controller.pause() : _controller.play();
             });
           },
           child: Icon(

@@ -25,9 +25,21 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  video_player: any
+  video_player:
+    git:
+      url: https://github.com/berberin/packages
+      path: packages/video_player/video_player
+      ref: feat/select_video_track
   video_player_web_hls:
     path: ../
+  js: ^0.6.7
+
+dependency_overrides:
+  video_player_platform_interface:
+    git:
+      url: https://github.com/berberin/packages
+      path: packages/video_player/video_player_platform_interface
+      ref: feat/select_video_track
 
 dev_dependencies:
   flutter_test:

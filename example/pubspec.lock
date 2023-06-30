@@ -97,7 +97,7 @@ packages:
     source: hosted
     version: "4.0.2"
   js:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: js
       sha256: f2c445dce49627136094980615a031419f7f3eb393237e4ecd97ac15dea343f3
@@ -216,11 +216,12 @@ packages:
   video_player:
     dependency: "direct main"
     description:
-      name: video_player
-      sha256: "59f7f31c919c59cbedd37c617317045f5f650dc0eeb568b0b0de9a36472bdb28"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.5.1"
+      path: "packages/video_player/video_player"
+      ref: "feat/select_video_track"
+      resolved-ref: "0ef393811d0c2653e68ac135733353fcad8fffa9"
+      url: "https://github.com/berberin/packages"
+    source: git
+    version: "2.7.0"
   video_player_android:
     dependency: transitive
     description:
@@ -238,12 +239,13 @@ packages:
     source: hosted
     version: "2.3.8"
   video_player_platform_interface:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: video_player_platform_interface
-      sha256: a8c4dcae2a7a6e7cc1d7f9808294d968eca1993af34a98e95b9bdfa959bec684
-      url: "https://pub.dev"
-    source: hosted
+      path: "packages/video_player/video_player_platform_interface"
+      ref: "feat/select_video_track"
+      resolved-ref: "0ef393811d0c2653e68ac135733353fcad8fffa9"
+      url: "https://github.com/berberin/packages"
+    source: git
     version: "6.1.0"
   video_player_web:
     dependency: transitive
@@ -259,7 +261,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "1.0.0+4"
+    version: "1.1.0"
 sdks:
   dart: ">=3.0.0 <4.0.0"
   flutter: ">=3.3.0"

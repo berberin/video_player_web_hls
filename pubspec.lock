@@ -200,10 +200,11 @@ packages:
   video_player_platform_interface:
     dependency: "direct main"
     description:
-      name: video_player_platform_interface
-      sha256: a8c4dcae2a7a6e7cc1d7f9808294d968eca1993af34a98e95b9bdfa959bec684
-      url: "https://pub.dev"
-    source: hosted
+      path: "packages/video_player/video_player_platform_interface"
+      ref: "feat/select_video_track"
+      resolved-ref: "0ef393811d0c2653e68ac135733353fcad8fffa9"
+      url: "https://github.com/berberin/packages"
+    source: git
     version: "6.1.0"
 sdks:
   dart: ">=3.0.0 <4.0.0"
